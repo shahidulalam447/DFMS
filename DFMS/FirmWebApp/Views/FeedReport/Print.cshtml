@@ -1,0 +1,184 @@
+﻿@model FeddingCostReportVM
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DAIRY FIRM MANAGEMENT SYSTEM (DFMS)</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link href="~/AdminLib/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="~/AdminLib/admin/css/adminlte.min.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 75%;
+        margin: 50px auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tfoot {
+        font-weight: bold;
+    }
+
+    #print-button {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    @@media print {
+        #print-button {
+            display: none;
+        }
+    }
+
+    .company-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3px;
+    }
+
+    .company-logo img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .company-details {
+        margin-left: 20px;
+    }
+
+        .company-details p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+    .print-link {
+        float: right;
+    }
+</style>
+<body>
+    <div class="print-link">
+        <a onclick="print()"><i class="fa fa-print"></i> Print</a>
+    </div>
+    <div class="container row">
+        <div class="company-info ">
+            <div class="company-logo">
+                <img src="~/kgfiles/firmlogo.png" alt="Company Logo">
+            </div>
+            <div class="company-details">
+                <p1><strong>DAIRY FIRM MANAGEMENT SYSTEM (DFMS)</strong></p1>
+                <p><strong> Sylhet, Bangladesh</strong></p>
+                <p><strong>Phone:</strong> 01700000000</p>
+                <p><strong>Print Date:</strong> @DateTime.Now</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper print-margin">
+
+        <div class="container">
+            <table id="example" class="table table-sm table-striped">
+                <thead>
+
+                    <h4 class="print-tr  text-center text-bold"> Cow Feed Consumption Report </h4>
+
+
+                    <tr>
+                        <th>Date</th>
+                        <th>Tag Number</th>
+                        <th>Fedding Quantity</th>
+                        <th>Consumption</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Replace this part with your dynamic data -->
+                    @if (Model != null)
+                    {
+
+                        @foreach (var cow in Model.FeddingCostList)
+                        {
+                            <tr>
+                                <td>@cow.Day</td>
+                                <td>@cow.TagNo</td>
+
+                                <td>@cow.FoodUnit</td>
+                                <td>@cow.Consumption.ToString("F2")</td>
+                            </tr>
+                        }
+
+                    }
+                    <!-- Repeat for each data row -->
+                </tbody>
+                <tfoot>
+                    @if (Model != null)
+                    {
+                        <tr>
+                            <td> Total Day: @Model.TottalDay</td>
+                            <td>Total Cow: @Model.TottalCow</td>
+                            <td>Total Quantity: @Model.TottalFoodUnit.ToString("F2")</td>
+                            <td>Total Consumption: @Model.TottalConsumption.ToString("F2")</td>
+                        </tr>
+                    }
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+
+
+    @section  Scripts{
+
+        <script>
+            $(document).ready(function () {
+
+                $('.print-link').hide();
+
+                window.print();
+                $('.print-link').delay(2000).show();
+            });
+
+            function Print() {
+
+                $('.print-link').hide();
+
+                window.print();
+                $('.print-link').delay(4000);
+                $('.print-link').show();
+            }
+
+
+        </script>
+    }
+
+</body>
+</html>
+
+

@@ -1,0 +1,90 @@
+﻿@model List<FeedConsumptionBulkServiceVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    int SN = 1;
+}
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">Feed Consumtion (Bulk)</li>
+            </ol>
+            <div>
+                <a asp-action="Create"><i class="fa fa-plus"></i>Feed  Consumtion (Bulk)</a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+
+    <div class="card-header">
+        <h5 class="card-title">Feed  Consumtions (Bulk)</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive-sm">
+            <table id="feedConsumptionBulktable" class="table  table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>SN</th>
+                        <th>Date</th>
+                        <th>Feed Category</th>
+                        <th>Quantity</th>
+                       <th>Unit Price</th>
+                       <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int index = 0;
+                    }
+
+                    @foreach (var consumptionbulk in Model)
+                    {
+                        <tr>
+                            <td>@SN</td>
+                            <td>@consumptionbulk.Date.ToShortDateString()</td>
+                            <td>@consumptionbulk.FeedCategoryName</td>
+                            <td>@consumptionbulk.Quantity</td>
+                            <td>@consumptionbulk.UnitPrice</td>
+
+                           <td>
+                                @* <a href="@Url.Action("Edit", new { id = consumptionbulk.Id })">Edit</a>
+                                <span> | </span> *@
+                                <a href="@Url.Action("Delete", new { id = consumptionbulk.Id })" onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+                            </td>
+                        </tr>
+                        index++;
+                        SN++;
+                    }
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</section>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            $('#Feed').addClass('menu-open');
+            $('#FeedConsumptionBulk').addClass('active');
+
+            $('#feedConsumptionBulktable').DataTable({
+                // Configure DataTable options
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                order: [[0, 'desc']],
+            });
+
+        });
+    </script>
+  }

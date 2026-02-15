@@ -1,0 +1,202 @@
+﻿
+<style>
+    .nav-treeview > .nav-item > .nav-link.active, [class*=sidebar-light-] .nav-treeview > .nav-item > .nav-link.active:hover {
+     /*   background-color: #484D53 !important;*/
+        background-color: #212529 !important;
+        color: bisque !important;
+   /*     border: 1px solid #fff !important;*/
+        font-weight:900;
+    }
+</style>
+
+<aside class="main-sidebar navbar-gray-dark sidebar-navy-info  elevation-4">
+    <a href="/Admin/Index" class="brand-link text-center">
+        <img src="~/kgfiles/firmlogo.png" alt="Logo" class="brand-image">
+    </a>
+
+    <div class="sidebar ">
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                <li class="nav-item" id="Dashboard">
+                    <a asp-controller="Admin" asp-action="Index" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt text-white"></i>
+                        <p class="text-white">
+                          DFMS
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item" id="Configuration">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-cow text-white"></i>
+                        <p class="text-white">
+                            Cow Zone
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/Cow/Index" class="nav-link" style="color:bisque" id="Cow">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p >Cows</p>
+                            </a>
+                        </li>
+                     
+                    </ul>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/CowBreed/Index" class="nav-link " style="color:bisque"  id="CowBreed">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p> Breeds </p>
+                            </a>
+                        </li>
+                    </ul>                   
+                </li>
+                <li class="nav-item" id="Health">
+                    <a href="#" class="nav-link">                     
+                        <i class=" nav-icon fa fa-suitcase-medical text-white"></i>
+                        <p class="text-white">
+                            Cow Health
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/Doctor/Index" class="nav-link " style="color:bisque" id="NewDoctor">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p>Doctors</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/Treatment/Index" class="nav-link " style="color:bisque" id="Treatment">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p>Treatment</p>
+                            </a>
+                        </li>
+                   
+
+                    </ul>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/Vaccine/Index" class="nav-link " style="color:bisque" id="Vaccine">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p>Vaccine</p>
+                            </a>
+                        </li>
+
+                    </ul>
+       
+                </li>
+                <li class="nav-item" id="MilkMonitoring">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-glass-water-droplet text-white"></i>
+                        <p class="text-white">
+                            Milk Monitoring
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/Milk/Index" class="nav-link " style="color:bisque" id="Milk">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+
+                                <p>Milk</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                
+                <li class="nav-item " id="Feed" >
+                    <a href="#" class="nav-link">
+                       <i class="nav-icon fa fa-bowl-rice text-white"></i>
+                        <p class="text-white">
+                            Feed Management
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                     <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/FeedCategory/Index" class="nav-link " style="color:bisque" id="FeedCategory">
+                                <i class="nav-icon fas fa-angle-double-right  "></i>
+                                <p >Feed Category</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/FeedEntry/Index" class="nav-link " style="color:bisque" id="FeedEntry">
+                                <i class="nav-icon fas fa-angle-double-right "></i>
+                                <p >Feed Entry</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-treeview " >
+                        <li class="nav-item">
+                            <a href="/FeedConsumptionBulk/Index" class="nav-link " style="color:bisque" id="FeedConsumptionBulk">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p >Consumption(Bulk)</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item" id="Employee">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-glass-water-droplet text-white"></i>
+                        <p class="text-white">
+                            Employee
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/Employee/Index" class="nav-link " style="color:bisque" id="NewEmployee">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+
+                                <p>Employee Information</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/Grades/Index" class="nav-link " style="color:bisque" id="NewGrade">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p>Grade</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/Departments/Index" class="nav-link " style="color:bisque" id="NewDepartment">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p>Departmentes</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="/BankModels/Index" class="nav-link " style="color:bisque" id="NewBank">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p>Bank Information</p>
+                            </a>
+                        </li>
+                    </ul>
+                   
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</aside>
+

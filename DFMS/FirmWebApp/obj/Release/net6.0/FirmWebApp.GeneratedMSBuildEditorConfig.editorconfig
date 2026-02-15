@@ -1,0 +1,329 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FirmWebApp
+build_property.RootNamespace = FirmWebApp
+build_property.ProjectDir = G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\FirmWebApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\FirmWebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/BankModels/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua01vZGVsc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/BankModels/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua01vZGVsc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/BankModels/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua01vZGVsc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/CowBreed/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ293QnJlZWRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/CowBreed/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ293QnJlZWRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/CowBreed/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ293QnJlZWRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/CowTotalReport/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ293VG90YWxSZXBvcnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/CowTotalReport/Print.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ293VG90YWxSZXBvcnRcUHJpbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Cow/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ293XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Cow/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ293XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Cow/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ293XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Cow/_CowSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ293XF9Db3dTdW1tYXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Departments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Departments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Departments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Doctor/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Doctor/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Doctor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Employee/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/ExpenseApproval/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZUFwcHJvdmFsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/ExpenseApproval/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZUFwcHJvdmFsXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/ExpenseApproval/ExpenseList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZUFwcHJvdmFsXEV4cGVuc2VMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/ExpenseApproval/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZUFwcHJvdmFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/ExpenseList/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZUxpc3RcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/ExpenseList/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZUxpc3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedCategory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedCategory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENhdGVnb3J5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedCategory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENhdGVnb3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedConsumptionBulk/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENvbnN1bXB0aW9uQnVsa1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedConsumptionBulk/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENvbnN1bXB0aW9uQnVsa1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedConsumptionCowWise/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENvbnN1bXB0aW9uQ293V2lzZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedConsumptionCowWise/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENvbnN1bXB0aW9uQ293V2lzZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedEntry/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZEVudHJ5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedEntry/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZEVudHJ5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedEntry/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZEVudHJ5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedReport/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZFJlcG9ydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/FeedReport/Print.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZFJlcG9ydFxQcmludC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Grades/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Grades/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Grades/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/IndividualCowReport/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaXZpZHVhbENvd1JlcG9ydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/JobInformation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iSW5mb3JtYXRpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/JobInformation/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iSW5mb3JtYXRpb25cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/JobInformation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iSW5mb3JtYXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/MedicalExpenseReport/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4cGVuc2VSZXBvcnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/MedicalExpenseReport/Print.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4cGVuc2VSZXBvcnRcUHJpbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/MilkReport/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlsa1JlcG9ydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/MilkReport/Print.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlsa1JlcG9ydFxQcmludC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Milk/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlsa1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Milk/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlsa1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Milk/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlsa1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Report/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Report/MilkReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XE1pbGtSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/SaleableItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZWFibGVJdGVtXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/SaleableItem/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZWFibGVJdGVtXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/SaleableItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZWFibGVJdGVtXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Shared/_partialAdminNavbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9wYXJ0aWFsQWRtaW5OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Shared/_partialAdminSidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9wYXJ0aWFsQWRtaW5TaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Treatment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlYXRtZW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Treatment/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlYXRtZW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Treatment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlYXRtZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/UserManagement/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcQ3JlYXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/User_Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcl9Mb2dpblxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Vaccine/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjY2luZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Vaccine/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjY2luZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Vaccine/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjY2luZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-yzdjk1kqvl
+
+[G:/MIT_SUST/MIT_3rdSemester/04_Project II/Rough/Rough 5/KgLivestock/FirmWebApp/Views/Shared/_Layout_Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-tnuz9q7qra

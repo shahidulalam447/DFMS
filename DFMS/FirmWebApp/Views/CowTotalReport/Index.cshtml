@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+
+}
+@model CowCostTotalVM
+
+@section style{
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <style>
+        #example thead th,
+        #example tfoot td {
+            text-align: center;
+        }
+        
+
+
+
+           
+        #PrintButton {
+            float: right;
+        }
+    </style>
+
+
+}
+<section>
+    <div class="container  w-75">
+        <div class="mt-5 mb-2">
+            <h3> Cow Total Cost Report </h3>
+                <div class="col-sm-2 mt-1 mb-2 p-3" id="PrintButton">
+
+                    @if (Model != null)
+                    {
+                    <a target="_blank" href="/Report/CowTotalSummary" class="btn btn-secondary  form-control">Print</a>
+
+                    }
+
+                </div>
+
+
+
+            
+        </div>
+        <table id="example" class="display w-100 text-center table border mt-3 float-right" cellspacing="0">
+            <thead>
+                <tr >
+                   
+                    <th>Tag Number</th>
+                    <th>Vaccine Cost</th>
+                    <th>Treatment Cost</th>
+                    <th>Feed Cost</th>
+                    <th>Buying Cost</th> 
+                    <th>Total Cost</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+
+                    @foreach (var cow in Model.CowCostList)
+                    {
+                        <tr>
+                            <td>@cow.TagNo</td>
+                            <td>@cow.VacCost.ToString("F2")</td>
+                            <td>@cow.Treatment.Value.ToString("F2")</td>
+                            <td>@cow.FeedCost.ToString("F2")</td>
+                            <td>@cow.BuyCost</td>
+                            <td>@cow.perCowCosting.Value.ToString("F2")</td>
+
+                        </tr>
+                    }
+
+                }
+            </tbody>
+            <tfoot>
+                @if (Model != null)
+                {
+                    <tr>
+                        <td>Total Cow: @Model.Cow</td>
+                        <td>Total Vacccine Cost: @Model.TotalVacCost.ToString("F2")</td>
+                        <td>Total Treatment Cost:@Model.TotalTreatment.Value.ToString("F2")</td>
+                        <td>Total Feed Cost:@Model.TotalFeedCost.ToString("F2")</td>
+                        <td>Total Buy Cost:@Model.CowBuying</td>
+                        <td>Total Cost: @Model.TotalCowCost.Value.ToString("F2")</td>
+                    </tr>
+                }
+            </tfoot>
+        </table>
+    </div>
+</section>
+@section Scripts{
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+}
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $('#ReportMenu').addClass('menu-open');
+        $('#cowTotalCost').addClass('active');
+        var table = $('#example').DataTable();
+
+    });
+</script>
+
+

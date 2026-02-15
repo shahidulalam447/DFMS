@@ -1,0 +1,79 @@
+﻿
+@model DepartmentServiceVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Department</h5>
+
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="Departments" method="post">
+                    <input asp-for="Id" hidden />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+                    <div class="row mx-2">
+
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="DepartmentName" class="control-label">Department Name</label>
+                                <input asp-for="DepartmentName" required class="form-control" placeholder="Enter Department Name ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="IsActive" class="control-label"> IsActive </label>
+                                <input asp-for="IsActive" type="checkbox" class="form-control-check" id="origin" placeholder="Enter IsActive  ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <a asp-action="Index" asp-controller="Departments" class="btn btn-light mr-2">
+                                Cancel
+                            </a>
+                            <button type="submit" class="btn btn-warning">Update</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Health').addClass('menu-open');
+            $('#NewDepartment').addClass('active');
+
+        });
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500,).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+  }
+
+

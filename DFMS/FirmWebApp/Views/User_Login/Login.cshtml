@@ -1,0 +1,55 @@
+﻿@model FirmWebApp.Models.LogInViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<style>
+    .logo {
+        position: absolute;
+        top: 45px;
+        right: 120px;
+    }
+</style>
+
+
+<section class="text-center">
+    <!-- Background image -->
+    <!-- Background image -->
+    <div class="logo" ><img style="width:100px;" src="~/KGFiles/firmlogo.png"/></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-5-strong" style="
+                    margin-top: 100px;
+                    background: hsla(0, 0%, 100%, 0.8);
+                    backdrop-filter: blur(30px);
+                ">
+                    <div class="card-body py-5 px-md-5">
+                        <form asp-action="Login">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" required asp-for="UserName" class="form-control" placeholder="Username" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <input required asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <input type="submit" value="Sign In" class="btn btn-primary btn-block mb-4" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

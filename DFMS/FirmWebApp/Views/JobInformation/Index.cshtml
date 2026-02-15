@@ -1,0 +1,105 @@
+﻿@using Firm.Service.Services.JobInformation_Services;
+@model List<JobInformationServiceVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    int SN = 1;
+}
+
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">Job Information</li>
+            </ol>
+            <div>
+                <a asp-action="Create"><i class="fa fa-plus"></i>Add New Job Information</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+
+    <div class="card-header">
+        <h5 class="card-title">Job Information</h5>
+    </div>
+    <div class="card-body">
+        <table id="jobInformationtable" class="table table-bordered table-responsive-sm">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Joining Date</th>
+                    <th>ProbationEndDate</th>
+                    <th>Permanent Date</th>
+                    <th>Department</th>
+                    <th>Designation</th>
+                    <th>Employee Category</th>
+                    <th>JobStatus</th>
+                    <th>ServiceType</th>
+                    <th>OfficeType</th>
+                    <th>Shift</th>
+                    <th>Grade</th>
+                    <th>IsActive</th>
+                    @* <th>IsDeleted</th> *@
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var jobInformation in Model.Where(x => x.IsActive == true && x.IsDeleted == false))
+                {
+                    <tr>
+                        <td>@SN</td>
+                        <td>@jobInformation.JoiningDate</td>
+                        <td>@jobInformation.ProbationEndDate</td>
+                        <td>@jobInformation.PermanentDate</td>
+                        <td>@jobInformation.Department</td>
+                        <td>@jobInformation.Designation</td>
+                        <td>@jobInformation.EmployeeCategory</td>
+                        <td>@jobInformation.JobStatus</td>
+                        <td>@jobInformation.ServiceType</td>
+                        <td>@jobInformation.OfficeType</td>
+                        <td>@jobInformation.Shift</td>
+                        <td>@jobInformation.Grade</td>
+                        <td>@jobInformation.IsActive</td>
+                        @* <td>@grade.IsDeleted</td> *@
+                        <td>
+                            @* @Html.ActionLink("Edit", "Edit", new { id = grade.Id }) *@
+                            <a asp-action="Edit" asp-controller="JobInformation" class="btn btn-outline-success btn-sm" asp-route-id="@jobInformation.Id"><i class="fa fa-edit"></i>Edit</a>
+                            @* @Html.ActionLink("Delete", "Delete", new { id = grade.Id }) *@
+                            <a asp-action="Delete" asp-controller="JobInformation" class="btn btn-outline-danger btn-sm" asp-route-id="@jobInformation.Id"><i class="fa fa-trash"></i>Delete</a>
+
+                        </td>
+                    </tr>
+                    SN++;
+                }
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            $('#Health').addClass('menu-open');
+            $('#NewJobInformation').addClass('active');
+
+            $('#jobInformationtable').DataTable({
+                // Configure DataTable options
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                order: [[0, 'desc']],
+            });
+
+        });
+    </script>
+  }

@@ -1,0 +1,226 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+
+}
+@model IndividualCowReportVM
+
+@section style{
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <style>
+        #example thead th,
+        #example tfoot td {
+            text-align: center;
+        }
+
+        #PrintButton {
+            float: right;
+        }
+    </style>
+
+
+}
+<section>
+    <div class="container  w-75">
+        <div class="mt-5 mb-2">
+            <h2> Individual Cow Report</h2>
+            <form asp-controller="Report" asp-action="IndividualCowReport" method="post">
+
+
+
+
+                <div class="row p-4">
+                    <div class="col-md-3 ">
+                        <label for="startDate">Tag Number:</label>
+                        <input asp-for="TagId" type="number" class="form-control" id="startDate">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="endDate">Current Weight:</label>
+                        <input asp-for="Weight" type="number"  class="form-control" id="endDate">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="endDate">Live Weight Meat Price</label>
+                        <input asp-for="CowPrice" type="number"  class="form-control" id="endDate">
+                    </div>
+                    <div class="col-md-2 mt-4">
+                        <button class="btn btn-primary d-block form-control mt-1" id="showButton">Show</button>
+                    </div>
+
+                </div>
+
+
+                @*<div class="col-sm-2 mt-1 mb-2 p-3" id="PrintButton">
+
+                    @if (Model != null)
+                    {
+                        <button formtarget="_blank" formaction="/MilkReport/MilkReport" class="btn btn-secondary  form-control">Print</button>
+
+                    }
+
+
+                </div>*@
+
+
+            </form>
+        </div>
+     @*   @if (Model != null)
+        {
+            <div class="container mt-5">
+                <div class="row">
+                <div class="col-md-6">
+                    <dl class="row">
+                        <dt class="col-sm-4">Cow Buy Price: </dt>
+                            <dt class="col-sm-8">@Model.BuyCost</dt>
+                        <dt class="col-sm-4">Cow Vacccine Cost : </dt>
+                            <dd class="col-sm-8">@Model.TotalVacCost</dd>
+                        <dt class="col-sm-4">Treatment Cost: </dt>
+                            <dd class="col-sm-8">@Model.TotalTreatment</dd>
+                        <dt class="col-sm-4">Cow Feed Cost:</dt>
+                        <dd class="col-sm-8"> @Model.TotalFeedCost</dd>
+
+                           <hr/>
+                            <dt class="col-sm-4">Cow Total Cost:</dt>
+
+                            <dd class="col-sm-8">@Model.TotalCowCost</dd>
+
+
+
+                            
+                        <!-- Add more key-value pairs as needed -->
+                    </dl>
+                </div>
+            </div>
+        </div>
+        }*@
+     <table id="example" class="display w-100 text-center table border" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Expense</th>
+                    <th> Amount</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+
+                        <tr>
+                            
+                            <td>Cow Buy Cost</td>
+                            <td>@Model.BuyCost</td>
+                        </tr>
+                         <tr>
+
+                             <td>Vaccine Cost</td>
+                            <td>@Model.TotalVacCost.ToString("F2")</td>
+                        </tr>
+                         <tr>
+                            
+                            <td>Treatment Cost</td>
+                            <td>@Model.TotalTreatment.Value.ToString("F2")</td>
+                        </tr>
+                         <tr>
+                            
+                            <td>Feed Cost</td>
+                            <td>@Model.TotalFeedCost.ToString("F2")</td>
+                        </tr>
+                        
+                         
+
+
+                }
+            </tbody>
+            <tfoot>
+                @if (Model != null)
+                {
+                    <tr class="" style="border:solid 2px">
+
+                        <td>Total Cost</td>
+                        <td>@Model.TotalCowCost.Value.ToString("F2")</td>
+                    </tr>
+                }
+            </tfoot>
+        </table>
+
+
+        <table id="cowSummaryTable" class="display w-100 text-center table border" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Expense</th>
+                    <th> Amount</th>
+                    <th> Profit/Loss</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+
+                    <tr>
+
+                        <td>Cow Buy Cost</td>
+                        <td>@Model.BuyCost</td> 
+                        <td></td>
+                    </tr>
+                    <tr>
+
+                        <td>Vaccine Cost</td>
+                        <td>@Model.TotalVacCost.ToString("F2")</td>
+                    </tr>
+                    <tr>
+
+                        <td>Treatment Cost</td>
+                        <td>@Model.TotalTreatment.Value.ToString("F2")</td>
+                    </tr>
+                    <tr>
+
+                        <td>Feed Cost</td>
+                        <td>@Model.TotalFeedCost.ToString("F2")</td>
+                    </tr>
+
+
+
+
+                }
+            </tbody>
+            <tfoot>
+                @if (Model != null)
+                {
+                    <tr class="" style="border:solid 2px">
+
+                        <td>Total Cost</td>
+                        <td>@Model.TotalCowCost.Value.ToString("F2")</td>
+                    </tr>
+                }
+            </tfoot>
+        </table>
+
+</div>
+</section>
+@section Scripts{
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+}
+
+<script type="text/javascript">
+    
+
+    $(document).ready(function () {
+        $('#ReportMenu').addClass('menu-open');
+        $('#MilkReport').addClass('active');
+       
+        var table = $('#example').DataTable({
+            "lengthChange":false,
+            "bFilter":false,
+            "pagination":false,
+           
+        });
+        $('#example_info').hide();
+        $('#example_paginate').hide();
+    });
+</script>
+
+
+

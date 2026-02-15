@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FirmWebApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FirmWebApp.styles.css" asp-append-version="true" />
+
+
+    <style>
+        body {
+            background-image: url('kgfiles/firm 1.jpg');
+            background-size: cover;
+            padding: 0 !important;
+           
+        }
+       
+    </style>
+</head>
+<body >
+
+    <div>
+       @* <img class="logo"  src="~/kgfiles/firmlogo.png" />*@
+        
+    </div>
+
+
+    <div class="container-fluid" style=" padding: 0 !important;">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted d-flex justify-content-center align-items-center" style="height: 60px;">
+        <span>
+            &copy; 2026 - <strong>DAIRY FIRM MANAGEMENT SYSTEM (DFMS)</strong>
+        </span>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @* <script src="https://cdn.datatables.net/1.10.26/js/jquery.dataTables.min.js"></script>*@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

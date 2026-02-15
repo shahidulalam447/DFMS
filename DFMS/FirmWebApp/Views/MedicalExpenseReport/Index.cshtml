@@ -1,0 +1,127 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+
+}
+@model Vaccine_Treatment_ReportVM
+
+@section style{
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <style>
+        #example thead th,
+        #example tfoot td {
+            text-align: center;
+        }
+
+        #PrintButton {
+            float: right;
+        }
+    </style>
+
+
+}
+<section>
+    <div class="container  w-75">
+        <div class="mt-5 mb-2">
+            <h3>Vaccine and Treatment Report</h3>
+            <form asp-controller="Report" asp-action="MedicalExpenseReport" method="post">
+
+               
+
+                <div class="row p-1">
+                    <div class="col-md-5 ">
+                        <label for="startDate">Start Date:</label>
+                        <input asp-for="StartDate" type="date" value="@Model.StartDate.ToString("yyyy-MM-dd")"  class="form-control" id="startDate">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="endDate">End Date:</label>
+                        <input asp-for="EndDate" type="date" value="@Model.EndDate.ToString("yyyy-MM-dd")"  class="form-control" id="endDate">
+                    </div>
+                    <div class="col-md-2 mt-4">
+                        <button class="btn btn-primary d-block form-control mt-1" id="showButton">Show</button>
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-2 mt-1 mb-2 p-3" id="PrintButton">
+
+                    @if (Model != null)
+                    {
+                        <button formtarget="_blank" formaction="/Report/MedicalExpenseSummary" class="btn btn-secondary  form-control">Print</button>
+
+                    }
+
+
+                </div>
+
+
+
+            </form>
+        </div>
+        <table id="example" class="display w-100 text-center table border mt-3" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Tag Number</th>
+                    <th>Expense For</th>
+                    <th>Treatment For</th>
+                    <th>Doctor Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+
+                    @foreach (var cow in Model.VTReportVM)
+                    {
+                        <tr>
+                            <td>@cow.Day</td>
+                            <td>@cow.TagId</td>
+                            <td>@cow.CostingType</td>
+                            <td>@cow.TreatmentFor</td>
+                            <td>@cow.DoctorName</td>
+                            <td>@cow.Price.ToString("F2")</td>
+
+                        </tr>
+                    }
+
+                }
+            </tbody>
+            <tfoot>
+                @if (Model != null)
+                {
+                    <tr>
+                        <td> Total Day: @Model.TottalDay</td>
+                        <td>Total Cow: @Model.TottalCow</td>
+                        <td></td> 
+                        <td></td>
+                        <td></td>
+                        <td>Total Cost: @Model.TottalPrice.ToString("F2")</td>
+                    </tr>
+                }
+            </tfoot>
+        </table>
+    </div>
+</section>
+@section Scripts{
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+}
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $('#ReportMenu').addClass('menu-open');
+        $('#VTreatmentReport').addClass('active');
+        var table = $('#example').DataTable();
+
+    });
+</script>
+
+

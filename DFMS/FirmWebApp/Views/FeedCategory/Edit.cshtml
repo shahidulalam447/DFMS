@@ -1,0 +1,76 @@
+﻿@model FeedCategoryServiceVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Feed Category</h5>
+
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="FeedCategory" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+                    <div class="row mx-2">
+
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="FeedCategoryName" class="control-label">Feed Category</label>
+                                <input asp-for="FeedCategoryName" required class="form-control" placeholder="Enter Feed Category">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="UnitName" class="control-label">Unit of measurement </label>
+                                <input asp-for="UnitName" required class="form-control" id="origin" placeholder="Kg, Litre etc.">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <a asp-action="Index" asp-controller="FeedCategory" class="btn btn-light mr-2">
+                                Cancel
+                            </a>
+                            <button type="submit" class="btn btn-warning">Update</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Feed').addClass('menu-open');
+            $('#FeedCategory').addClass('active');
+
+        });
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500,).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+  }
+
+

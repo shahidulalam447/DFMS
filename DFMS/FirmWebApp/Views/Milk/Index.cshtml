@@ -1,0 +1,157 @@
+﻿@model List<MilkServiceViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    int SN = 1;
+}
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">Milk</li>
+            </ol>
+            <div class=" p-1 ">
+                <h5> <a href="/Report/MilkReport">Milk Report</a></h5> <hr />
+                <a asp-action="Create"><i class="fa fa-plus"></i>Add Cow wise Milk</a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+
+    <div class="card-header">
+        <h5 class="card-title">Milking History</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive-sm">
+            <table id="milktable" class="display table  border table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Date</th>
+                        <th>Tag No.</th>
+                       
+                        <th>Mourning Shift (Litre)</th>
+                        <th>Day Shift (Litre)</th>
+                        <th>Evening Shift (Litre)</th>  
+                        <th>Total Milk (Litre)</th>
+                        <th>Action</th>
+                       @*  <th>Details</th> *@
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int index = 0;
+                    }
+
+                    @foreach (var treatment in Model)
+                    {
+                        <tr>
+                            <td>@SN</td>
+                            <td>@treatment.Date.ToShortDateString()</td>
+                            <td>@treatment.CowTagId</td>
+                        
+                            <td style="width:120px">@treatment.MourningShift</td>
+                                <td style="width:100px">@treatment.DayShift</td>
+                            <td style="width:100px">@treatment.EveningShift</td>
+                            <td style="width:100px">@treatment.TotalMilk</td>
+                           
+                            <td>
+                                <a href="@Url.Action("Edit", new { id = treatment.Id })">Edit</a>
+                               <span> | </span>
+                                <a href="@Url.Action("Delete", new { id = treatment.Id})" onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+                            </td>
+                          
+                            @* <td>
+                                <button type="button" class="btn btn-outline-primary mx-1" data-toggle="modal" data-target="#milkModal-@index">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <div class="modal fade" id="milkModal-@index" tabindex="-1" role="dialog" aria-labelledby="milkModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="milkModalLabel">Item Details</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Add your content here -->
+                                                <div class="row mx-2">
+
+
+                                                    <div class="col-md-4 col-sm-12 col-lg-4">
+                                                        <div class="form-group">
+                                                            <label asp-for="@treatment.Date" class="control-label"> Date</label>
+                                                            <input readonly asp-for="@treatment.Date" type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12 col-lg-4">
+                                                        <div class="form-group">
+                                                            <label asp-for="@treatment.CowId" class="control-label">Cow Tag</label>
+                                                            <select readonly asp-for="@treatment.CowId" class="form-control" asp-items="ViewBag.cowList">
+                                                                <option value="">-- Select Cow Tag No.--</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-12 col-lg-4">
+                                                        <div class="form-group">
+                                                            <label asp-for="@treatment.TotalMilk" class="control-label"> Milk Collection (Litre)</label>
+                                                            <input readonly asp-for="@treatment.TotalMilk"  class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label asp-for="@treatment.Remarks" class="control-label"> Remarks </label>
+                                                            <textarea readonly asp-for="@treatment.Remarks" class="form-control" placeholder="Enter Treatment Details" maxlength="100"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td> *@
+
+                        </tr>
+                        index++;
+                        SN++;
+                    }
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</section>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            $('#MilkMonitoring').addClass('menu-open');
+            $('#Milk').addClass('active');
+
+            $('#milktable').DataTable({
+                // Configure DataTable options
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                order: [[0, 'desc']],
+            });
+
+        });
+    </script>
+  }
+
+

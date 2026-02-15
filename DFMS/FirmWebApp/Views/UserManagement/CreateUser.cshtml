@@ -1,0 +1,108 @@
+﻿@model FirmWebApp.ViewModel.CreateUserViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+
+            <form asp-controller="UserManagement"
+                  asp-action="CreateUser"
+                  method="post"
+                  class="card border-0 shadow-lg rounded-4 overflow-hidden">
+
+                @Html.AntiForgeryToken()
+
+                <!-- Header -->
+                <div class="bg-primary bg-gradient text-white p-4">
+                    <h4 class="mb-1 fw-semibold">
+                        <i class="bi bi-person-plus-fill me-2"></i>
+                        Create User Account
+                    </h4>
+                </div>
+
+                <!-- Body -->
+                <div class="card-body p-4">
+                    <div class="row g-4">
+
+                        <!-- Username -->
+                        <div class="col-md-6">
+                            <label asp-for="UserName" class="form-label fw-semibold">User Name</label>
+                            <input asp-for="UserName"
+                                   class="form-control form-control-lg"
+                                   placeholder="Write a user name" 
+                                   autocomplete="new-user" />
+                            <span asp-validation-for="UserName" class="text-danger small"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-6">
+                            <label asp-for="Email" class="form-label fw-semibold"></label>
+                            <input asp-for="Email"
+                                   class="form-control form-control-lg"
+                                   placeholder="Write your email" />
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="col-md-6">
+                            <label asp-for="PhoneNumber" class="form-label fw-semibold">Phone Number</label>
+                            <input asp-for="PhoneNumber"
+                                   class="form-control form-control-lg"
+                                   placeholder="01XXXXXXXXX" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="col-md-6">
+                            <label asp-for="Password" class="form-label fw-semibold"></label>
+                            <input asp-for="Password"
+                                   type="password"
+                                   class="form-control form-control-lg"
+                                   placeholder="Create a strong password"
+                                   autocomplete="new-password" />
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+
+                        <!-- Role -->
+                        <div class="col-12" style="padding-top: 12px;">
+                            <label asp-for="Role" class="form-label fw-semibold"></label>
+                            <select asp-for="Role"
+                                    asp-items="ViewBag.Roles"
+                                    class="form-select form-select-lg">
+                                <option value="">🔽 Select user role</option>
+                            </select>
+                            <span asp-validation-for="Role" class="text-danger small"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="card-footer bg-light d-flex justify-content-end gap-3 p-4">
+
+                    <!-- Cancel -->
+                    <a asp-controller="Admin"
+                       asp-action="Index"
+                       class="btn btn-outline-secondary btn-lg px-4">
+                        <i class="bi bi-x-circle me-1"></i> Cancel
+                    </a>
+
+                    <!-- Submit -->
+                    <button type="submit"
+                            class="btn btn-primary btn-lg px-5 shadow">
+                        <i class="bi bi-check-circle-fill me-1"></i>
+                        Create User
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

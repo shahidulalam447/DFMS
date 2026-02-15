@@ -1,0 +1,314 @@
+﻿@using Firm.Service.Services.Employee_Services;
+@model EmployeeServiceVM
+
+@{
+    ViewData["Title"] = "Create Employee";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<style>
+    .page-title {
+        font-weight: 600;
+        letter-spacing: .2px;
+    }
+
+    .section-title {
+        font-size: .95rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .required::after {
+        content: " *";
+        color: #dc3545;
+        font-weight: 700;
+    }
+
+    .soft-divider {
+        border-top: 2px solid #dc3545;
+        margin: .75rem 0 1rem;
+        opacity: .9;
+    }
+
+    .form-hint {
+        font-size: .85rem;
+        color: #6c757d;
+        margin-top: .25rem;
+    }
+
+    .card-elevated {
+        border: 0;
+        border-radius: .75rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,.06);
+        overflow: hidden;
+    }
+
+    .card-header-clean {
+        background: #fff;
+        border-bottom: 1px solid rgba(0,0,0,.06);
+        padding: 1rem 1.25rem;
+    }
+
+    .card-body-clean {
+        background: #fff;
+        padding: 1.25rem;
+    }
+
+    .nav-tabs .nav-link {
+        font-weight: 600;
+    }
+
+    .sticky-actions {
+        position: sticky;
+        bottom: 0;
+        background: #fff;
+        padding: .75rem 0 0;
+        border-top: 1px solid rgba(0,0,0,.06);
+        margin-top: 1rem;
+    }
+
+    .img-preview {
+        width: 84px;
+        height: 84px;
+        border-radius: .75rem;
+        object-fit: cover;
+        border: 1px solid rgba(0,0,0,.1);
+        display: none;
+    }
+</style>
+
+<section class="content">
+    <div class="container-fluid">
+
+        <div class="card card-elevated">
+            <div class="card-header card-header-clean d-flex align-items-center justify-content-between">
+                <div>
+                    <h5 class="page-title mb-1">Create a new employee informations</h5>
+                </div>
+            </div>
+
+            <div class="card-body card-body-clean">
+                
+                <div class="tab-content pt-3" id="employeeTabsContent">
+                    <div class="tab-pane fade show active"
+                         id="nav-personal"
+                         role="tabpanel"
+                         aria-labelledby="nav-personal-tab">
+
+                        <form asp-action="Create" asp-controller="Employee" method="post" enctype="multipart/form-data">
+                            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                            @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                            {
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    @ViewData["ErrorMessage"]
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            }
+
+
+                            <div class="row">
+                                <!-- First Name -->
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="FirstName" class="required"></label>
+                                        <input asp-for="FirstName" class="form-control" placeholder="Enter first name" required />
+                                        <span asp-validation-for="FirstName" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Last Name -->
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="LastName" class="required"></label>
+                                        <input asp-for="LastName" class="form-control" placeholder="Enter last name" required />
+                                        <span asp-validation-for="LastName" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- DOB -->
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="DateOfBirth"></label>
+                                        <input asp-for="DateOfBirth" class="form-control" type="date" />
+                                        <span asp-validation-for="DateOfBirth" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Age -->
+                                <div class="col-lg-2 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="Age"></label>
+                                        <input asp-for="Age" class="form-control" placeholder="Age" />
+                                        <span asp-validation-for="Age" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Gender -->
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="Gender"></label>
+                                        <input asp-for="Gender" class="form-control" placeholder="Enter gender" />
+                                        <span asp-validation-for="Gender" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Marital Status -->
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="MaritalStatus"></label>
+                                        <input asp-for="MaritalStatus" class="form-control" placeholder="Enter marital status" />
+                                        <span asp-validation-for="MaritalStatus" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Parents -->
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="FatherName"></label>
+                                        <input asp-for="FatherName" class="form-control" placeholder="Enter father's name" />
+                                        <span asp-validation-for="FatherName" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="MotherName"></label>
+                                        <input asp-for="MotherName" class="form-control" placeholder="Enter mother's name" />
+                                        <span asp-validation-for="MotherName" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Contact -->
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="MobileNo"></label>
+                                        <input asp-for="MobileNo" class="form-control" placeholder="Enter mobile number" />
+                                        <span asp-validation-for="MobileNo" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="Email"></label>
+                                        <input asp-for="Email" class="form-control" placeholder="Enter email address" />
+                                        <span asp-validation-for="Email" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Identity -->
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="NationalId"></label>
+                                        <input asp-for="NationalId" class="form-control" placeholder="Enter national ID number" />
+                                        <span asp-validation-for="NationalId" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="Religion"></label>
+                                        <input asp-for="Religion" class="form-control" placeholder="Enter religion" />
+                                        <span asp-validation-for="Religion" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="BloodGroup"></label>
+                                        <input asp-for="BloodGroup" class="form-control" placeholder="Enter blood group" />
+                                        <span asp-validation-for="BloodGroup" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Address -->
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="PermanentAddress"></label>
+                                        <input asp-for="PermanentAddress" class="form-control" placeholder="Enter permanent address" />
+                                        <span asp-validation-for="PermanentAddress" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="PresentAddress"></label>
+                                        <input asp-for="PresentAddress" class="form-control" placeholder="Enter present address" />
+                                        <span asp-validation-for="PresentAddress" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Photo -->
+                                
+                                <div class="col-lg-8 col-md-8 col-sm-12">
+                                    <div class="form-group">
+                                        <label asp-for="ImagePath">Picture</label>
+                                        <div class="d-flex align-items-center">
+                                            <input type="file" asp-for="ImagePath" class="form-control" id="ImagePathInput" />
+                                            <div class="ml-3">
+                                                <img id="ImagePreview" class="img-preview" alt="Preview" />
+                                            </div>
+                                        </div>
+                                        <div class="form-hint">Recommended: JPG/PNG under 2MB.</div>
+                                        <span asp-validation-for="ImagePath" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Sticky actions -->
+                            <div class="sticky-actions">
+                                <div class="d-flex justify-content-end">
+                                    <a asp-action="Index" asp-controller="Employee" class="btn btn-light mr-2">
+                                        Cancel
+                                    </a>
+                                    <button type="submit" class="btn btn-primary">
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            $('#Employee').addClass('menu-open');
+            $('#NewEmployee').addClass('active');
+
+            // Auto-dismiss alerts (fixed fadeTo usage)
+            window.setTimeout(function () {
+                $(".alert").fadeTo(400, 0).slideUp(400, function () {
+                    $(this).remove();
+                });
+            }, 4000);
+
+            // Image preview
+            $("#ImagePathInput").on("change", function (e) {
+                const file = e.target.files && e.target.files[0];
+                if (!file) return;
+
+                const allowed = ["image/jpeg", "image/png", "image/webp"];
+                if (!allowed.includes(file.type)) return;
+
+                const url = URL.createObjectURL(file);
+                $("#ImagePreview").attr("src", url).show();
+            });
+        });
+    </script>
+}

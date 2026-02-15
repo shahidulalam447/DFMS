@@ -1,0 +1,153 @@
+﻿@using Firm.Infrastructure.Auth;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> signInManager
+@inject UserManager<ApplicationUser> UserManager
+@inject IWorkContext workcontect
+@{
+    bool adminchecker = true;
+    var currentuser = await workcontect.GetCurrentUserAsync();
+    if (currentuser != null)
+    {
+        adminchecker = await UserManager.IsInRoleAsync(currentuser, "Admin");
+        //Votercheck = await UserManager.IsInRoleAsync(currentuser, "Hotel");
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Firm</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="~/AdminLib/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="~/AdminLib/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="~/AdminLib/admin/css/adminlte.min.css" rel="stylesheet" />
+    <link href="~/AdminLib/overlayScrollbars/css/OverlayScrollbars.min.css" rel="stylesheet" />
+    <link href="~/AdminLib/summernote/summernote-bs4.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/AdminLib/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/AdminLib/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <link href="~/css/adminCustomt.css" rel="stylesheet" />
+    <link href="~/AdminLib/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/AdminLib/Dropify/css/dropify.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <script src="https://kit.fontawesome.com/4fb09bb935.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    @RenderSectionAsync("style",required:false)
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed text-sm">
+    <div class="wrapper">
+       <partial name="_partialAdminNavbar" />
+        <nav class="main-header navbar navbar-expand navbar--gray-dark ">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars text-white"></i></a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto ">
+
+            
+                @* <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt text-white"></i>
+                    </a>
+                </li> *@
+                <li class="nav-item dropdown sidebar-light-white user-menu">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <span class="d-none d-md-inline text-green">User Information</span>
+                        @* <img src="~/kgfiles/firmlogo.png" class="user-image img-circle elevation-1" alt="Image"> *@
+
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <!-- User image -->
+                        <li class="user-header bg-info">
+
+                            @* 
+                            <img src="~/assets/logo.png" class="img-circle elevation-2" alt="User Image">
+                            *@
+                            <p class="text-end">
+                                @{
+                                    var userTypeText = (currentuser.UserType == 1) ? "Admin" : "Employee";
+                                    var userTypeBadgeClass = (currentuser.UserType == 1) ? "bg-danger" : "bg-success";
+                                }
+                                <label class="form-label">User: @currentuser.UserName</label><br />
+                                <label class="form-label">Email: @currentuser.Email</label><br />
+                                <label class="form-label">Phone: @currentuser.PhoneNumber</label><br />
+                                <label class="form-label badge @userTypeBadgeClass rounded-pill px-3 py-2">
+                                    User Type: @userTypeText
+                                </label>
+                            </p>
+
+                        </li>
+
+                        <li class="user-footer">
+                            <a href="/User_Login/Logout" class="btn btn-default btn-flat float-right">Sign out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <partial name="_partialAdminSidebar" />
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+
+        <footer class="border-top footer text-muted d-flex justify-content-end align-items-center p-2" style="height: 60px;">
+            <span>
+                &copy; 2026 - <strong>DAIRY FIRM MANAGEMENT SYSTEM (DFMS)</strong>
+            </span>
+        </footer>
+
+        @* <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2026 - DAIRY FIRM MANAGEMENT SYSTEM (DFMS) - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer> *@
+    </div>
+    <script src="~/AdminLib/jquery/dist/jquery.min.js"></script>
+    <script src="~/AdminLib/jquery-ui/jquery-ui.min.js"></script>
+
+    <script src="~/AdminLib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="~/AdminLib/sparklines/sparkline.js"></script>
+    <script src="~/AdminLib/moment/moment.min.js"></script>
+    <script src="~/AdminLib/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="~/AdminLib/summernote/summernote-bs4.min.js"></script>
+    <script src="~/AdminLib/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="~/AdminLib/admin/js/adminlte.js"></script>
+    <script src="~/AdminLib/admin/js/pages/dashboard.js"></script>
+    <script src="~/AdminLib/select2/js/select2.full.min.js"></script>
+    <script src="~/AdminLib/Dropify/js/dropify.js"></script>
+    <script src="~/AdminLib/pagination.js"></script>
+    <script src="~/AdminLib/notify.js"></script>
+    <script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
+
+        $(document).ready(function () {
+            $('.dropify').dropify();
+            $('.summernote').summernote({
+                tabsize: 2,
+                height: 200
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+﻿@using Firm.Service.Services.Bank_Services;
+@model BankServiceVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Bank Information</h5>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="BankModels" method="post">
+                    <input asp-for="Id" hidden />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+                    <div class="row mx-2">
+
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label">Bank Name</label>
+                                <input asp-for="Name" required class="form-control" placeholder="Enter Bank Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="BankBranch" class="control-label">Bank Branch </label>
+                                <input asp-for="BankBranch" required class="form-control" id="origin" placeholder="Enter Bank Branch ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="BankAccount" class="control-label"> Bank Account </label>
+                                <input asp-for="BankAccount" class="form-control" id="origin" placeholder="Enter BankA ccount">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="DisburseMethod" class="control-label"> Disburse Method </label>
+                                <input asp-for="DisburseMethod" class="form-control" id="origin" placeholder="Enter Disburse Method ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="CreatedDate" class="control-label"> Created Date </label>
+                                <input asp-for="CreatedDate" class="form-control" id="origin" placeholder="Enter Created Date ">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Feed').addClass('menu-open');
+            $('#NewBank').addClass('active');
+
+        });
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500,).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+  }

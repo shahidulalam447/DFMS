@@ -1,0 +1,140 @@
+﻿@using static Firm.Utility.Miscellaneous.Enum
+@model CowServiceViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Cow Information</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="Cow" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row mx-2">
+
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="PurchaseDate" class="control-label">Purchase Date (কেনার তারিখ)</label>
+                                <input asp-for="PurchaseDate" class="form-control" placeholder="Enter purchase date">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Origin" class="control-label"> Purchased From (ক্রয় স্থান) </label>
+                                <input asp-for="Origin" class="form-control" id="origin" placeholder="Enter Source">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Price" class="control-label">Purchase Price (ক্রয় মূল্য)</label>
+                                <input asp-for="Price" class="form-control" id="price" placeholder="Enter price">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="BreedId" class="control-label">Breed (জাত)</label>
+                                <select asp-for="BreedId" class="form-control"  asp-items="ViewBag.breedlist">
+                                    <option value="">-- Select Breed --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Color" class="control-label"> Color (রঙ) </label>
+                                <input asp-for="Color" class="form-control" id="cowcolor" placeholder="Enter Color">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Weight" class="control-label">Weight (KG) /  ওজন (কেজি)</label>
+                                <input asp-for="Weight" class="form-control" id="cow-weight" placeholder="Enter weight">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+
+                            <div class="form-group">
+                                <label asp-for="Age" class="control-label">Age (Months) / বয়স (মাস) </label>
+                                <input asp-for="Age" class="form-control" placeholder="Enter age">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="CalfGender" class="control-label">Gender (লিঙ্গ)</label>
+                                <select asp-for="CalfGender" asp-items="Html.GetEnumSelectList<Gender>()" class="form-control"></select>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="LivestockTypeVal" class="control-label"> Type (ধরণ)</label>
+                                <select asp-for="LivestockTypeVal" asp-items="Html.GetEnumSelectList<LivestockType>()" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="ShedNo" class="control-label">Shed No. (চালার নম্বর)</label>
+                                <input asp-for="ShedNo" class="form-control" id="cow-weight" placeholder="No of Shed">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="LineNo" class="control-label">Row No. (সারি নম্বর)</label>
+                                <input asp-for="LineNo" class="form-control" id="cow-weight" placeholder="No of Row">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="CowTeeth" class="control-label">Teeth (দাঁত)</label>
+                                <input asp-for="CowTeeth" class="form-control" id="cow-weight" placeholder="No of Teeth">
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="TagId" class="control-label">Tag No.(ট্যাগ)</label>
+                                <input asp-for="TagId" class="form-control" placeholder="Enter Tag" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="MotherTag" class="control-label">Mother Tag (মায়ের ট্যাগ)</label>
+                                <input asp-for="MotherTag" class="form-control" id="calf-age" placeholder="Enter calf age">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <a asp-action="Index" asp-controller="Cow" class="btn btn-light mr-2">
+                                Cancel
+                            </a>
+                            <button type="submit" class="btn btn-warning">Update</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Configuration').addClass('menu-open');
+            $('#NewCow').addClass('active');
+
+        });
+    </script>
+  }
+

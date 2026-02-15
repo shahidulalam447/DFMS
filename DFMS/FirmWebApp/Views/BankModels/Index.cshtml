@@ -1,0 +1,89 @@
+﻿@using Firm.Service.Services.Bank_Services;
+@model List<BankServiceVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    int SN = 1;
+}
+
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">Bank Information</li>
+            </ol>
+            <div>
+                <a asp-action="Create"><i class="fa fa-plus"></i>Add New Bank Information</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+
+    <div class="card-header">
+        <h5 class="card-title">Bank Information</h5>
+    </div>
+    <div class="card-body">
+        <table id="banktable" class="table table-bordered table-responsive-sm">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Bank Name</th>
+                    <th>Bank Branch</th>
+                    <th>CreatedBy</th>
+                    <th>Disburse Method</th>
+                    <th>Bank Account</th>
+                    <th>IsActive</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var bank in Model.Where(x => x.IsActive == true && x.IsDeleted == false))
+                {
+                    <tr>
+                        <td>@SN</td>
+                        <td>@bank.Name</td>
+                        <td>@bank.BankBranch</td>
+                        <td>@bank.CreatedDate</td>
+                        <td>@bank.DisburseMethod</td>
+                        <td>@bank.BankAccount</td>
+                        <td>@bank.IsActive</td>
+                        <td>
+                            <a asp-action="Edit" asp-controller="BankModels" class="btn btn-outline-success btn-sm" asp-route-id="@bank.Id"><i class="fa fa-edit"></i></a>
+                            <a asp-action="Delete" asp-controller="BankModels" class="btn btn-outline-danger btn-sm" asp-route-id="@bank.Id"><i class="fa fa-trash"></i></a>
+
+                        </td>
+                    </tr>
+                    SN++;
+                }
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            $('#Health').addClass('menu-open');
+            $('#NewBank').addClass('active');
+
+            $('#banktable').DataTable({
+                // Configure DataTable options
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                order: [[0, 'desc']],
+            });
+
+        });
+    </script>
+  }

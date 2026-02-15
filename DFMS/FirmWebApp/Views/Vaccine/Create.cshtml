@@ -1,0 +1,118 @@
+﻿@model VaccineServiceViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">Vaccine</li>
+            </ol>
+            <div>
+                <a asp-action="Index"><i class="fa fa-arrow-left mr-2"></i>Back To List</a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Vaccine</h5>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Create" asp-controller="Vaccine" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+                    <div class="row mx-2">
+                        <div class="col-md-4 col-sm-12 col-lg-4">
+                            <div class="form-group">
+                                <label asp-for="VaccineDate" class="control-label">Vaccine Date</label>
+                                <input asp-for="VaccineDate" type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-lg-4">
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label">Vaccine Name</label>
+                                <input asp-for="Name" class="form-control" placeholder="Enter Vaccine Name">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-lg-4">
+                            <div class="form-group">
+                                <label asp-for="DoseNo" class="control-label">Dose No.</label>
+                                <input asp-for="DoseNo"  class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-lg-4">
+                            <div class="form-group">
+                                <label asp-for="DoctorId" class="control-label">Doctor</label>
+                                <select asp-for="DoctorId" class="form-control" asp-items="ViewBag.doctorList">
+                                    <option value="">-- Select Doctor --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-lg-4">
+                            <div class="form-group">
+                                <label asp-for="CowId" class="control-label">Cow Tag No.</label>
+                                <select asp-for="CowId" class="form-control" asp-items="ViewBag.cowList">
+                                    <option value="">-- Select Cow Tag No.--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-lg-4">
+                            <div class="form-group">
+                                <label asp-for="Price" class="control-label"> Vaccine Cost </label>
+                                <input asp-for="Price" class="form-control" placeholder="Enter Total Cost">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="Details" class="control-label"> Details </label>
+                                <textarea asp-for="Details" class="form-control" placeholder="Enter Details" maxlength="100"></textarea>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Health').addClass('menu-open');
+            $('#Vaccine').addClass('active');
+
+        });
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500,).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+  }
+
+
+

@@ -1,0 +1,205 @@
+﻿@model FeedConsumptionBulkServiceVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    int i = 0;
+}
+@section style{
+    <style>
+        table tr td {
+            text-align: center;
+        }
+
+        table th {
+            text-align: center;
+        }
+    </style>
+}
+
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">Feed Consumption (Bulk)</li>
+            </ol>
+            <div>
+                <a asp-action="Index"><i class="fa fa-arrow-left mr-2"></i>Back To List</a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Feed Consumption (Bulk)</h5>
+            </div>
+
+            <div class="card-body w-75 mx-auto">
+                <form asp-action="ShadeLineFeedList" asp-controller="FeedConsumptionBulk">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning" id="alte">
+                            @Model.ErrorMessage
+                        </div>
+                    }
+                    <div class="row mx-2">
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Date" class="control-label"> Date</label>
+                                @if (Model == null)
+                                {
+                                    <input asp-for="Date" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" class="form-control" placeholder="Enter Milking Date">
+                                }
+
+                                @if (Model != null)
+                                {
+                                    <input asp-for="Date" type="date" value="@Model.Date.ToString("yyyy-MM-dd")" class="form-control" placeholder="Enter Milking Date">
+
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="FeedCategoryId" class="control-label">Feed Category</label>
+                                <select asp-for="FeedCategoryId" class="form-control" asp-items="ViewBag.feedCategoryList">
+                                    <option value="">-- Select Feed Category--</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-2 float-right">
+                        <div class="form-group col-sm-4">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+@if (Model != null)
+{
+    <form asp-action="Create" asp-controller="FeedConsumptionBulk" method="post">
+        <input type="hidden"  asp-for="FeedCategoryId" value="@Model.FeedCategoryId" />
+        <input type="hidden"  asp-for="Date" value="@Model.Date" />
+        <div class="w-75 mx-auto">
+            <table id="FeedConsumptionTable" class="display table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sl</th>
+                        <th>Shade Number</th>
+
+
+                        <th>Line Number</th>
+                        <th>Quentity</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+
+
+
+
+
+                    @foreach (var list in Model.feedConsumptionList)
+                    {
+                        <tr>
+
+
+                            <td>@(i + 1)</td>
+                            <td>
+
+                                <input type="hidden" class="text-center" asp-for="feedConsumptionList[i].ShadeNo" value="@list.ShadeNo" />@list.ShadeNo
+                            </td>
+                            <td>
+
+                                <input type="hidden" class="text-center" asp-for="feedConsumptionList[i].LineNo" value="@list.LineNo" />@list.LineNo
+                            </td>
+
+                            <td><input value="" class="text-center" asp-for="feedConsumptionList[i].Quantity" /> Kg</td>
+
+                        </tr>
+
+                        i++;
+                    }
+
+
+                </tbody>
+                <tfoot class="table-borderless">
+                    <tr>
+                        <td colspan="4">
+                            <div class="row mx-2 float-right">
+                                <div class="form-group col-sm-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                </tfoot>
+            </table>
+        </div>
+    </form>
+
+
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Feed').addClass('menu-open');
+            $('#FeedConsumptionBulk').addClass('active');
+            $('#FeedConsumptionTable').DataTable({
+                "paging": false,
+                "pageLength": 50
+
+            });
+            $('#milkCollectionTable_info').hide();
+          
+
+        });
+    </script>
+    <script>
+        //$(document).ready(function () {
+        //    $('#FeedCategoryId').change(function () { // Listen for change event on the select element
+        //        var categoryId = $(this).val(); // Get the selected categoryId
+
+        //        $.ajax({
+        //            url: '/FeedEntry/GetUnitName', // Replace YourController with the appropriate controller name
+        //            type: 'GET',
+        //            data: { categoryId: categoryId }, // Pass the selected categoryId as a parameter
+        //            success: function (data) {
+        //                var unitName = data.unitName; // Retrieve the unitName from the response
+
+        //                $('#Quantity').attr('placeholder', 'Quantity in ' + unitName);
+        //            }
+        //        });
+        //    });
+
+        //});
+
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $("#alte").fadeTo(500,).slideUp(500, function () {
+                $("#alte").remove();
+            });
+        }, 4000);
+    </script>
+
+  }
+
+

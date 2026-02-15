@@ -1,0 +1,204 @@
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+E:\KrishibidGroup\New folder (2)\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+C:\Users\DELL\Desktop\tcl\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\Project\IsDB\ataur481209\Office Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\MIT_SUST\MIT_2ndSemester\05_Project I\Project\KgLivestock (1) (1)\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 2\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 3\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 4\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 5\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 6\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\KgLivestock\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\bin\Debug\net6.0\Firm.Core.deps.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\bin\Debug\net6.0\Firm.Core.runtimeconfig.json
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\bin\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\bin\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\bin\Debug\net6.0\Firm.Utility.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\bin\Debug\net6.0\Firm.Utility.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.AssemblyReference.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\Firm.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfoInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\Firm.Core.AssemblyInfo.cs
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CoreCompileInputs.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\Firm.Core.csproj.CopyComplete
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\refint\Firm.Core.dll
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\Firm.Core.pdb
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\Firm.Core.genruntimeconfig.cache
+G:\MIT_SUST\MIT_3rdSemester\04_Project II\Rough\Rough 7\DFMS\Firm.Core\obj\Debug\net6.0\ref\Firm.Core.dll

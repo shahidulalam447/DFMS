@@ -1,0 +1,133 @@
+﻿@using Firm.Service.Services.JobInformation_Services;
+@model JobInformationServiceVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Job Information</h5>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Create" asp-controller="JobInformation" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+                    <div class="row mx-2">
+
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="JoiningDate" class="control-label">Joining Date</label>
+                                <input asp-for="JoiningDate" required class="form-control" placeholder="Enter Joining Date">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="ProbationEndDate" class="control-label">JProbation EndDate</label>
+                                <input asp-for="ProbationEndDate" required class="form-control" placeholder="Enter ProbationEndDate">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="PermanentDate" class="control-label">Permanent Date</label>
+                                <input asp-for="PermanentDate" required class="form-control" placeholder="Enter Permanent Date">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Department" class="control-label">Department</label>
+                                <input asp-for="Department" required class="form-control" placeholder="Enter Department">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Designation" class="control-label"> Designation Name </label>
+                                <input asp-for="Designation" required class="form-control" id="origin" placeholder="Enter Designation Name ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="EmployeeCategory" class="control-label"> Employee Category </label>
+                                <input asp-for="EmployeeCategory" class="form-control" id="origin" placeholder="Enter Employee Category  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="JobStatus" class="control-label"> Job Status </label>
+                                <input asp-for="JobStatus" class="form-control" id="origin" placeholder="Enter Job Status  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="ServiceType" class="control-label"> Service Type </label>
+                                <input asp-for="ServiceType" class="form-control" id="origin" placeholder="Enter Service Type  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                               
+                                <label asp-for="OfficeType" class="control-label">OfficeType</label>
+                                <input asp-for="OfficeType" class="form-control" id="origin" placeholder="Enter OfficeType ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+
+                                <label asp-for="Shift" class="control-label">Shift</label>
+                                <input asp-for="Shift" class="form-control" id="origin" placeholder="Enter Shift ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+
+                                <label asp-for="Grade" class="control-label">Grade</label>
+                                <input asp-for="Grade" class="form-control" id="origin" placeholder="Enter Grade ">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <a asp-action="Index" asp-controller="JobInformation" class="btn btn-light mr-2">
+                                Cancel
+                            </a>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Health').addClass('menu-open');
+            $('#NewJobInformation').addClass('active');
+
+        });
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500,).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+  }
+

@@ -1,0 +1,67 @@
+﻿@model BreedServiceViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Breed (জাত) </h5>
+
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="CowBreed" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input hidden="hidden" asp-for="BreedId" >
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+                    <div class="row mx-2">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="BreedName" class="control-label">Breed (জাত) </label>
+                                <input asp-for="BreedName" class="form-control" placeholder="Enter purchase date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <a asp-action="Index" asp-controller="CowBreed" class="btn btn-light mr-2">
+                                Cancel
+                            </a>
+                            <button type="submit" class="btn btn-warning">Update</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Configuration').addClass('menu-open');
+            $('#CowBreed').addClass('active');
+
+        });
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500,).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+  }
+

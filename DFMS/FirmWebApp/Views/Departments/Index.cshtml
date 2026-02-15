@@ -1,0 +1,86 @@
+﻿@model List<DepartmentServiceVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    int SN = 1;
+}
+
+
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">Department</li>
+            </ol>
+            <div>
+                <a asp-action="Create"><i class="fa fa-plus"></i>Add New Department</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+
+    <div class="card-header">
+        <h5 class="card-title">Department</h5>
+    </div>
+    <div class="card-body">
+        <table id="departmenttable" class="table table-bordered table-responsive-sm">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Department</th>
+                    <th>IsActive</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var department in Model.Where(x => x.IsActive == true && x.IsDeleted == false))
+                {
+                    <tr>
+                        <td>@SN</td>
+                        <td>@department.DepartmentName</td>
+                        
+                        <td>@department.IsActive</td>
+                        <td>
+                            @* @Html.ActionLink("Edit", "Edit", new { id = grade.Id }) *@
+                            <a asp-action="Edit" asp-controller="Departments" class="btn btn-outline-success btn-sm" asp-route-id="@department.Id"><i class="fa fa-edit"></i>Edit</a>
+                            @* @Html.ActionLink("Delete", "Delete", new { id = grade.Id }) *@
+                            <a asp-action="Delete" asp-controller="Departments" class="btn btn-outline-danger btn-sm" asp-route-id="@department.Id"><i class="fa fa-trash"></i>Delete</a>
+
+                        </td>
+                    </tr>
+                    SN++;
+                }
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            $('#Health').addClass('menu-open');
+            $('#NewDepartment').addClass('active');
+
+            $('#departmenttable').DataTable({
+                // Configure DataTable options
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                order: [[0, 'desc']],
+            });
+
+        });
+    </script>
+  }
+

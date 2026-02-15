@@ -1,0 +1,118 @@
+﻿@using static Firm.Utility.Miscellaneous.Enum;
+@model MilkServiceViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">Milk</li>
+            </ol>
+            <div>
+                <a asp-action="Index"><i class="fa fa-arrow-left mr-2"></i>Back To List</a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Milk</h5>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="Milk" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+                    <div class="row mx-2">
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Date" class="control-label"> Date </label>
+                                <input asp-for="Date" type="date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="CowId" class="control-label">Cow Tag No.</label>
+                                <select required asp-for="CowId" class="form-control" asp-items="ViewBag.cowList">
+                                    <option value="">-- Select Cow Tag No.--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="DayShift" class="control-label">Day Shift</label>
+                                <input asp-for="DayShift" type="number" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="MourningShift" class="control-label">Mourning Shift</label>
+                                <input asp-for="MourningShift" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="EveningShift" class="control-label">Evening Shift</label>
+                                <input asp-for="EveningShift" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="form-group">
+                                    <label asp-for="Remarks" class="control-label"> Remarks </label>
+                                    <textarea asp-for="Remarks" class="form-control" placeholder="Enter Remarks" maxlength="100"></textarea>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <button type="submit" class="btn btn-warning">Update</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#MilkMonitor').addClass('menu-open');
+            $('#Milk').addClass('active');
+
+        });
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500,).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+  }
+
+
+
+

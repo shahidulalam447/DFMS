@@ -1,0 +1,188 @@
+﻿@model List<ExpenseApprovalServiceVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    int SN = 1;
+}
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">expense</li>
+            </ol>
+           @*  <div>
+                <a asp-action="Create"><i class="fa fa-plus"></i> Expense Approval </a>
+            </div> *@
+        </div>
+    </div>
+</div>
+<section class="content">
+
+    <div class="card-header">
+        <h5 class="card-title">Expenses</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive-sm">
+            <table id="expensetable" class="table  table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Expense Date</th>
+                        <th>Ref No</th>
+                        <th>Payment Mode</th>
+                        <th>Expense Item</th>
+                        <th>Amount</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                        
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int index = 0;
+                    }
+
+                    @foreach (var expense in Model)
+                    {
+                        <tr>
+                            <td>@SN</td>
+                            <td>@expense.ExpenseDate.ToShortDateString()</td>
+                            <td>@expense.RefNo</td>
+                            <td>@expense.PaymentModeId</td>
+                            <td>@expense.ExpenseItemId</td>
+                            <td>@expense.Amount</td>
+                            <td>@expense.Description</td>
+
+                            @if (!expense.IsComplete)
+                            {
+                                <td>
+                                   @*  <a href="@Url.Action("Complete", new { id = expense.Id })" onclick="return confirm('You won\'t be able to edit this anymore! Click OK to proceed.')">Approve/Deny</a> *@
+                                    <span> | </span>
+                                    <a href="@Url.Action("Edit", new { id = expense.Id })">Edit</a>
+                                    <span> | </span>
+                                    <a href="@Url.Action("Delete", new { id = expense.Id })" onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+                                </td>
+                            }
+                           @*  else
+                            {
+                                <td><a href="@Url.Action("ExpenseList","ExpenseApproval")" class="text-success"> Approved </a></td>
+                            } *@
+
+
+                            <td>
+                                <button type="button" class="btn btn-outline-primary mx-1" data-toggle="modal" data-target="#exampleModal-@index">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <div class="modal fade" id="exampleModal-@index" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Item Details</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Add your content here -->
+                                                <div class="row mx-2">
+                                                    <div class="col-md-4 col-sm-12 col-lg-4">
+                                                        <div class="form-group">
+                                                            <label asp-for="@expense.ExpenseDate" class="control-label">Expense Date</label>
+                                                            <input readonly asp-for="@expense.ExpenseDate" type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12 col-lg-4">
+                                                        <div class="form-group">
+                                                            <label asp-for="@expense.RefNo" class="control-label">Ref No</label>
+                                                            <input readonly asp-for="@expense.RefNo" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-sm-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label asp-for="@expense.PaymentModeId" class="control-label"> Payment Mode </label>
+                                                            <input readonly asp-for="@expense.PaymentModeId" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-sm-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label asp-for="@expense.ExpenseItemId" class="control-label"> Expense Item </label>
+                                                            <input readonly asp-for="@expense.ExpenseItemId" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label asp-for="@expense.Amount" class="control-label"> Amount </label>
+                                                            <input readonly asp-for="@expense.Amount" class="form-control">
+
+
+                                                        </div>
+                                                    </div>
+
+                                                  @*   <div class="col-md-12 col-sm-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label asp-for="@expense.Status" class="control-label"> Status </label>
+                                                            <input readonly asp-for="@expense.Status" class="form-control">
+                                                           
+
+                                                        </div>
+                                                    </div> *@
+                                                   @*  <div class="col-md-4 col-sm-12 col-lg-4"> *@
+                                                    <div class="col-md-12 col-sm-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            <label asp-for="@expense.Description" class="control-label">Desciption</label>
+                                                            <textarea readonly asp-for="@expense.Description" class="form-control" placeholder="Enter Details" maxlength="100"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                
+
+                                             </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+
+                        </tr>
+                        index++;
+                        SN++;
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            $('#Expense').addClass('menu-open');
+            $('#ExpenseApproval').addClass('active');
+
+            $('#expensetable').DataTable({
+                // Configure DataTable options
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                order: [[0, 'desc']],
+            });
+
+        });
+    </script>
+  }

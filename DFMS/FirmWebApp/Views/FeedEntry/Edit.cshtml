@@ -1,0 +1,119 @@
+﻿@model FeedEntryServiceVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<div class="content-header">
+    <div class="container-fluid ">
+        <div class="breadcrumb d-flex justify-content-between align-items-center shadow pl-3 pr-3">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="/Admin/Index">Home</a></li>
+                <li class="breadcrumb-item active">Feed Entry</li>
+            </ol>
+            <div>
+                <a asp-action="Index"><i class="fa fa-arrow-left mr-2"></i>Back To List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Feed Entry</h5>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="FeedEntry" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+                    <div class="row mx-2">
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Date" class="control-label"> Date</label>
+                                <input asp-for="Date" type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="FeedCategoryId" class="control-label">Feed Category</label>
+                                <select asp-for="FeedCategoryId" class="form-control" asp-items="ViewBag.feedCategoryList">
+                                    <option value="">-- Select Feed Category--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Quantity" class="control-label">Total Quantity</label>
+                                <input asp-for="Quantity" class="form-control" placeholder="Feed amount">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="UnitPrice" class="control-label">Unit Price</label>
+                                <input asp-for="UnitPrice" class="form-control" placeholder="Per unit price">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <button type="submit" class="btn btn-warning">Update</button>
+                        </div>
+                    </div>
+
+                    <!-- Add a hidden input field for the Id -->
+                    <input type="hidden" asp-for="Id" />
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Feed').addClass('menu-open');
+            $('#FeedEntry').addClass('active');
+
+        });
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500,).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#FeedCategoryId').change(function () { // Listen for change event on the select element
+                var categoryId = $(this).val(); // Get the selected categoryId
+
+                $.ajax({
+                    url: '/FeedEntry/GetUnitName', // Replace YourController with the appropriate controller name
+                    type: 'GET',
+                    data: { categoryId: categoryId }, // Pass the selected categoryId as a parameter
+                    success: function (data) {
+                        var unitName = data.unitName; // Retrieve the unitName from the response
+
+                        $('#Quantity').attr('placeholder', 'Feed amount in ' + unitName);
+                        $('#UnitPrice').attr('placeholder', 'Per ' + unitName + ' price');
+                    }
+                });
+            });
+        });
+
+    </script>
+  }
+

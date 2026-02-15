@@ -1,0 +1,162 @@
+﻿@using Firm.Service.Services.Employee_Services;
+@model EmployeeServiceVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="card-header">
+                <h5 class="card-title">Employee</h5>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Edit" asp-controller="Employee" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+                    {
+                        <div class="alert alert-warning">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+                    <div class="row mx-2">
+
+
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="FirstName" class="control-label">First Name</label>
+                                <input asp-for="FirstName" required class="form-control" placeholder="Enter First Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="LastName" class="control-label"> Last Name </label>
+                                <input asp-for="LastName" required class="form-control" id="origin" placeholder="Enter Last Name ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="DateOfBirth" class="control-label"> Date Of Birth </label>
+                                <input asp-for="DateOfBirth" class="form-control" id="origin" placeholder="Enter Date Of Birth  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="FatherName" class="control-label"> Father Name </label>
+                                <input asp-for="FatherName" class="form-control" id="origin" placeholder="Enter Father Name  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="MotherName" class="control-label"> MotherName </label>
+                                <input asp-for="MotherName" class="form-control" id="origin" placeholder="Enter Mother Name  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="MaritalStatus" class="control-label"> Marital Status</label>
+                                <select></select>
+                                <input asp-for="MaritalStatus" class="form-control" id="origin" placeholder="Enter Marital Status ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="Age" class="control-label"> Age</label>
+                                <input asp-for="Age" class="form-control" id="origin" placeholder="Enter Age">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="ImagePath" class="control-label"> Picture </label>
+                                <input type="file" asp-for="ImagePath" class="form-control" id="origin" placeholder="Enter Mother Name  ">
+                                <img src="<img src=" ~ /images/morgue.jpg" />" alt="Smiley face" width="42" height="42" style="border:5px solid black">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="Gender" class="control-label"> Gender </label>
+                                <input asp-for="Gender" class="form-control" id="origin" placeholder="Enter Gender  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="NationalId" class="control-label"> National ID Card </label>
+                                <input asp-for="NationalId" class="form-control" id="origin" placeholder="Enter National Id Card ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="Religion" class="control-label">Religion</label>
+                                <input asp-for="Religion" class="form-control" id="origin" placeholder="Enter Religion ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="MobileNo" class="control-label"> Mobile Number </label>
+                                <input asp-for="MobileNo" class="form-control" id="origin" placeholder="Enter Mobile Number  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label"> Email </label>
+                                <input asp-for="Email" class="form-control" id="origin" placeholder="Enter Email  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="PermanentAddress" class="control-label"> Permanent Address </label>
+                                <input asp-for="PermanentAddress" class="form-control" id="origin" placeholder="Enter PermanentAddress  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="PresentAddress" class="control-label"> Present Address </label>
+                                <input asp-for="PresentAddress" class="form-control" id="origin" placeholder="Enter Present Address  ">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="form-group">
+                                <label asp-for="BloodGroup" class="control-label"> Blood Group </label>
+                                <input asp-for="BloodGroup" class="form-control" id="origin" placeholder="Enter BloodGroup  ">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mx-2">
+                        <div class="form-group col-sm-12">
+                            <a asp-action="Index" asp-controller="Employee" class="btn btn-light mr-2">
+                                Cancel
+                            </a>
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#Employee').addClass('menu-open');
+            $('#NewEmployee').addClass('active');
+
+        });
+    </script>
+    <script>
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500,).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+  }
+
